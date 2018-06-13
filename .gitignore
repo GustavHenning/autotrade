@@ -1,4 +1,5 @@
-config/account.json
+config/live.json
+config/default.json
 
 # Logs
 logs

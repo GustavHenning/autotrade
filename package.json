@@ -1,0 +1,29 @@
+{
+  "name": "nordnet-autotrade",
+  "version": "1.0.0",
+  "description": "nordnet trading bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustavHenning/nordnet-autotrade.git"
+  },
+  "keywords": [
+    "nordnet",
+    "stock",
+    "trading",
+    "bot"
+  ],
+  "author": "Gustav Henning",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GustavHenning/nordnet-autotrade/issues"
+  },
+  "homepage": "https://github.com/GustavHenning/nordnet-autotrade#readme",
+  "dependencies": {
+    "config": "^1.30.0",
+    "nordnet-next-api": "^5.1.2"
+  }
+}
