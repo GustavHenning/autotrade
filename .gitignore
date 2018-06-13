@@ -1,3 +1,5 @@
+config/account.config
+
 # Logs
 logs
 *.log
