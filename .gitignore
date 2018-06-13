@@ -1,5 +1,6 @@
 config/live.json
 config/default.json
+cert/*
 
 # Logs
 logs

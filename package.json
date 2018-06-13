@@ -24,6 +24,9 @@
   "homepage": "https://github.com/GustavHenning/nordnet-autotrade#readme",
   "dependencies": {
     "config": "^1.30.0",
-    "nordnet-next-api": "^5.1.2"
+    "log": "^1.4.0",
+    "nordnet-next-api": "^5.1.2",
+    "restler": "^3.4.0",
+    "ursa": "^0.9.4"
   }
 }
