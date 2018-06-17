@@ -5,19 +5,13 @@ const express = require('express');
 
 const auth = require('./lib/account/auth')
 const log = require('./lib/log')
+const scrape = require('./lib/data/scrapeNasdaq')
 
 const app = express();
 
 app.get('/', async function (req, res) {
-  const response = await auth.login(config.get('username'), config.get('password'))
-
-  if(response.status == 401){
-    log.info("Probably invalid login credentials: Check yours in config/ and cert/")
-  } else if (response.status = 200) {
-    log.info("Hooray!")
-  }
-  //var response = await api.get('https://api.test.nordnet.se/next/2')
-  //res.send(response)
+  var scraping = await scrape.scrapeNasdaq()
+  res.send(scraping)
 });
 
 

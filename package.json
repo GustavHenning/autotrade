@@ -23,10 +23,11 @@
   },
   "homepage": "https://github.com/GustavHenning/nordnet-autotrade#readme",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "config": "^1.30.0",
+    "fs": "0.0.1-security",
     "log": "^1.4.0",
-    "nordnet-next-api": "^5.1.2",
-    "restler": "^3.4.0",
-    "ursa": "^0.9.4"
+    "request": "^2.87.0",
+    "restler": "^3.4.0"
   }
 }
