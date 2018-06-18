@@ -1,7 +1,4 @@
-config/live.json
-config/default.json
-cert/*
-!cert/README.md
+data/
 
 # Logs
 logs
