@@ -3,16 +3,23 @@
 const config = require('config');
 const express = require('express');
 
-const auth = require('./lib/account/auth')
 const log = require('./lib/log')
 const scrape = require('./lib/data/scrapeNasdaq')
 
 const app = express();
 
+const forceSymbolScraping = process.env.FORCE_SYMBOL_SCRAPING
+
 app.get('/', async function (req, res) {
-  var scraping = await scrape.scrapeNasdaq()
-  res.send(scraping)
+
+  let scraping
+  try {
+    scraping = await scrape.scrapeNasdaq(forceSymbolScraping)
+    res.send(scraping)
+  } catch (err){
+    console.log(err)
+  }
 });
 
 
-app.listen(3000, () => console.log('nordnet-autotrade is listening on port 3000!'))
+app.listen(3000, () => console.log('autotrade is listening on port 3000!'))
