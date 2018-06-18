@@ -2,11 +2,12 @@
 
 Getting started:
 
-You need node: `node --version`
+You need node: `node -v` to verify
 
-You need npm: `npm version`
+You need npm: `npm -v` to verify
 
 
+## Instructions
 
 Clone repository ^
 
