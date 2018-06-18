@@ -1,10 +1,9 @@
 "use strict"
 
-const config = require('config');
 const express = require('express');
 
 const log = require('./lib/log')
-const scrape = require('./lib/data/scrapeNasdaq')
+const scrape = require('./lib/pipeline/datagathering/scrapeNasdaq')
 
 const app = express();
 
