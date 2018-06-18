@@ -3,18 +3,19 @@
 const express = require('express');
 
 const log = require('./lib/log')
-const scrape = require('./lib/pipeline/datagathering/scrapeNasdaq')
+const symbolsScraper = require('./lib/pipeline/datagathering/scrapeNasdaq')
 
 const app = express();
 
-const forceSymbolScraping = process.env.FORCE_SYMBOL_SCRAPING
+let forceSymbolScrape = process.env.FORCE_SYMBOL_SCRAPE
 
 app.get('/', async function (req, res) {
 
-  let scraping
+  let symbols
   try {
-    scraping = await scrape.scrapeNasdaq(forceSymbolScraping)
-    res.send(scraping)
+    symbols = await symbolsScraper.scrape(forceSymbolScrape)
+    forceSymbolScrape = false
+    res.send(symbols)
   } catch (err){
     console.log(err)
   }
